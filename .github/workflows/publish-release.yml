@@ -4,7 +4,7 @@ on:
   push:
     branches: [main]
     paths:
-      - ".github/release-trigger-1.0.0"
+      - ".github/release-trigger-1.0.1"
 
 permissions:
   contents: write
@@ -20,12 +20,12 @@ jobs:
         env:
           GH_TOKEN: ${{ github.token }}
         run: |
-          if gh release view "1.0.0" >/dev/null 2>&1; then
-            echo "Release 1.0.0 already exists."
+          if gh release view "1.0.1" >/dev/null 2>&1; then
+            echo "Release 1.0.1 already exists."
             exit 0
           fi
-          gh release create "1.0.0" \
+          gh release create "1.0.1" \
             main.js manifest.json styles.css \
-            --title "Pointix Sheet Copy v1.0.0" \
-            --notes "Stable release. Double tap to copy on touch/pen and Ctrl/Cmd + click on desktop." \
+            --title "Pointix Sheet Copy v1.0.1" \
+            --notes "Submission-readiness release. Adds MIT licensing and updates plugin metadata. Copy behavior is unchanged from v1.0.0." \
             --target main
