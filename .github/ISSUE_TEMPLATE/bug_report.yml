@@ -1,0 +1,46 @@
+name: Bug report
+description: Report a reproducible problem
+title: "[Bug] "
+body:
+  - type: input
+    id: device
+    attributes:
+      label: Device
+      placeholder: "Windows laptop, Android tablet, iPad, MacBook..."
+    validations:
+      required: true
+  - type: input
+    id: os
+    attributes:
+      label: Operating system
+    validations:
+      required: true
+  - type: input
+    id: obsidian
+    attributes:
+      label: Obsidian version
+    validations:
+      required: true
+  - type: input
+    id: sheetplus
+    attributes:
+      label: Sheet Plus version
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected behavior
+    validations:
+      required: true
+  - type: textarea
+    id: actual
+    attributes:
+      label: Actual behavior
+    validations:
+      required: true
+  - type: textarea
+    id: media
+    attributes:
+      label: Screen recording / screenshots
+      description: Attach media if it helps reproduce the issue.
