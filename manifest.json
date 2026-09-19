@@ -1,1 +1,10 @@
-{"id":"pointix-sheet-copy","name":"Pointix Sheet Copy","version":"1.0.0","minAppVersion":"1.5.0","description":"Fast cell copy for Sheet Plus: double tap on touch/pen and Ctrl/Cmd + click on desktop.","author":"Pointix","isDesktopOnly":false}
+{
+  "id": "pointix-sheet-copy",
+  "name": "Pointix Sheet Copy",
+  "version": "1.0.1",
+  "minAppVersion": "1.13.7",
+  "description": "Copy Sheet Plus cells with double tap on touch or pen, or Ctrl/Cmd + click on desktop.",
+  "author": "Pointix",
+  "isDesktopOnly": false,
+  "authorUrl": "https://github.com/ExplorerAS"
+}
