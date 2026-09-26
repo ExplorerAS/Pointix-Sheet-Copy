@@ -1,110 +1,64 @@
 # Pointix Sheet Copy
 
-A focused companion plugin for **Obsidian + Sheet Plus** that makes copying spreadsheet cells faster while leaving navigation to Sheet Plus or Pointix Sheet Navigation.
+Complemento para copiar celdas y rangos de **Sheet Plus en Obsidian**. Funciona de forma independiente de [Pointix Sheet Navigation](https://github.com/ExplorerAS/Pointix-Sheet-Navigation); puedes usar ambos.
 
-## Stable version
+## Instalar
 
-**v1.0.0**
+Busca **Pointix Sheet Copy** en **Ajustes → Complementos comunitarios → Explorar**. Instala y activa también **Sheet Plus**, que proporciona las hojas de cálculo.
 
-### Touch / pen
-- **Double tap** to copy the selected cell.
+Para instalación manual, coloca `main.js`, `manifest.json` y `styles.css` en `.obsidian/plugins/pointix-sheet-copy/`. Reinicia Obsidian o recarga los complementos y activa **Pointix Sheet Copy**. Los tres archivos deben corresponder a la misma versión.
 
-### PC / laptop
-- **Ctrl + click** to copy on Windows/Linux.
-- **Cmd + click** to copy on macOS.
+## Abrir el panel de copia
 
-The plugin contains no scrolling or pointer-move engine.
+- **Teléfono o tableta:** abre una hoja completa de Sheet Plus, selecciona una celda y mantenla presionada para abrir el panel de Pointix. El panel tiene desplazamiento propio; ciérralo con **×** o tocando fuera. Si el teclado está visible, el panel se acomoda sobre él.
+- **PC o Mac:** haz clic derecho en la hoja. El panel de Pointix aparece junto al menú de Sheet Plus. También puedes ejecutar **Pointix Sheet Copy: Abrir panel de copiado** desde la paleta de comandos.
 
-## Recommended companion
+El panel y los formatos de copia se ofrecen en la vista completa de Sheet Plus. Las hojas incrustadas en notas no tienen todavía el panel de copia porque no se puede identificar con seguridad su instancia de hoja.
 
-For improved touch navigation and Alt/Option + drag panning on desktop, use:
+## Copiar
 
-**Pointix Sheet Navigation**  
-https://github.com/ExplorerAS/Pointix-Sheet-Navigation
+Después de seleccionar una celda o rango, elige la opción que necesites. El copiado de texto conserva el orden de filas y columnas al pegar en Sheet Plus, WPS, Excel y Google Sheets. En Windows se comprobó también el copiado con formato y la tabla Markdown.
 
-The two plugins are intentionally independent:
-> Navigation owns navigation. Copy owns copying.
+| Opción | Resultado |
+| --- | --- |
+| Copiar contenido · WPS, Excel, Sheet Plus y más | Texto con tabulaciones y saltos de línea para conservar filas y columnas. |
+| Copiar fórmula de la celda | Fórmula de la selección; las celdas sin fórmula quedan vacías. |
+| Copiar contenido y fórmula | Fórmulas donde las haya y contenido en las demás celdas, como texto tabulado. |
+| Copiar con formato, colores y diseño | Tabla HTML y texto alternativo; intenta conservar estilos, bordes, combinaciones y tamaños disponibles en Sheet Plus. |
+| Copiar formato, contenido y fórmula | Tabla HTML con fórmulas como contenido de las celdas calculadas y texto alternativo. El destino determina cómo interpreta esas fórmulas. |
+| Copiar como tabla Markdown | Tabla para una nota Markdown. |
+| Copiar como CSV | Texto separado por comas. |
 
-## Requirements
+El pegado con formato depende de que la aplicación de destino acepte HTML del portapapeles. Si el dispositivo no lo acepta, el complemento copia texto y lo informa. Las fórmulas copiadas a otra hoja pueden mostrar avisos de inconsistencia o requerir ajustar referencias fijas y relativas en el destino.
 
-- Obsidian
-- Sheet Plus
+**WPS en móvil:** durante las pruebas, el contenido y las celdas se pegaron en orden, pero el formato visual cambió de forma intermitente entre intentos. Si los colores o estilos no coinciden, comprueba el resultado y repite el pegado o usa **Copiar contenido**. En Google Sheets y Sheet Plus móvil, las opciones probadas conservaron correctamente el contenido; el resultado final también depende de la aplicación receptora.
 
-## Manual installation
+### Seleccionar un rango
 
-Place this repository's plugin files in:
+1. Selecciona la primera celda de una **hoja completa** de Sheet Plus y abre el panel.
+2. Pulsa **Seleccionar rango…**. La barra de Pointix muestra la referencia, por ejemplo `A2:D7`.
+3. Toca la celda final, arrastra para seleccionar o usa las flechas de la barra. En móvil, **Mover la hoja** cambia entre la selección de rango y el desplazamiento mientras la barra está abierta. Haz los ajustes de rango poco a poco y verifica la referencia que muestra la barra.
+4. Pulsa **Copiar…** para elegir el formato. **Cancelar** sale del modo de rango. La barra flota sobre Sheet Plus: mantén presionado su título **Pointix Sheet Copy** y arrástrala a otra posición si tapa alguna celda. Al abrirse el teclado, la barra se recoloca dentro del área visible.
 
-```
-.obsidian/plugins/pointix-sheet-copy/
-```
+En móvil, el modo de rango transforma los gestos sobre la hoja para construir la selección; **Mover la hoja** permite desplazarse durante ese modo. Fuera de él, Navigation conserva sus propios gestos. El manejo de hojas extensas en una pantalla pequeña puede requerir varios movimientos de la barra y de la hoja.
 
-Required files:
+### Atajos
 
-```
-main.js
-manifest.json
-styles.css
-```
+- **Pantalla táctil o lápiz:** doble toque para copiar rápidamente una celda. Si tienes Navigation activo, su gesto de copia se comunica con Copy.
+- **Windows/Linux:** `Ctrl` + clic para copiar una celda.
+- **macOS:** `Cmd` + clic para copiar una celda.
+- Puedes asignar atajos a las acciones desde **Ajustes → Atajos de teclado**.
 
-Then enable **Pointix Sheet Copy** in Obsidian → Settings → Community plugins.
+En PC, **Alt/Option + arrastrar** desplaza hojas incrustadas en notas cuando la opción correspondiente está activada en los ajustes de Copy. Si también utilizas Navigation, comprueba el gesto en tu configuración antes de depender de él.
 
-## Compatibility
+## Diagnóstico y soporte
 
-Designed for:
-- Windows desktops and laptops
-- macOS / MacBook
-- Android phones and tablets
-- iPhone / iPad
-- Touch screens and pen/stylus input
+En los ajustes de Pointix Sheet Copy puedes activar **Diagnóstico de selección en el móvil**. La barra mostrará los toques recibidos y la referencia de la hoja; comparte una captura si la selección no responde. Desactívalo al terminar.
 
-## Privacy
+Para reportar un problema, escribe a **[servicios.globix@gmail.com](mailto:servicios.globix@gmail.com)** o abre un [issue en GitHub](https://github.com/ExplorerAS/Pointix-Sheet-Copy/issues). Indica el dispositivo, sistema operativo, versiones de Obsidian y Sheet Plus, si usas Pointix Sheet Navigation, los pasos realizados, el resultado esperado y lo que ocurrió. Una grabación breve ayuda cuando el fallo es visual.
 
-Pointix Sheet Copy is intended to operate locally inside Obsidian. It does not intentionally transmit spreadsheet contents, clipboard contents, vault files, credentials, or analytics to a remote service.
+## Privacidad y apoyo
 
-## Feedback
+Pointix Sheet Copy procesa la hoja localmente al copiar, no solicita credenciales y no envía el contenido por red. Sheet Plus, Obsidian Sync, el sistema operativo y las aplicaciones donde pegues tienen sus propias políticas.
 
-When reporting a problem, please include:
-- device
-- operating system
-- Obsidian version
-- Sheet Plus version
-- expected vs actual behavior
-- a short screen recording when useful
-
----
-
-Fast copying, without taking over spreadsheet navigation.
-
-
-## Public beta
-
-This plugin is available as a public beta through **BRAT**.
-
-### Install with BRAT
-
-1. Install and enable **BRAT** in Obsidian.
-2. Open **Settings → BRAT**.
-3. Under **Beta plugin list**, click **+**.
-4. Paste this repository URL:
-
-```
-https://github.com/ExplorerAS/Pointix-Sheet-Copy
-```
-
-5. Click **Add Plugin**.
-6. Keep BRAT auto-update enabled if you want beta updates automatically.
-
-Current tested release: **1.0.0**
-
-Release page: https://github.com/ExplorerAS/Pointix-Sheet-Copy/releases/tag/1.0.0
-
-### Beta feedback wanted
-
-Real-world reports are especially useful from:
-- macOS / MacBook
-- iPhone / iPad
-- Windows touch laptops
-- Android tablets
-- stylus / pen devices
-
-Please open a GitHub issue with your device, OS, Obsidian version, Sheet Plus version, and a short screen recording if the behavior is visual.
+Si te resulta útil, puedes **[invitarnos un café en Ko-fi](https://ko-fi.com/exprorerit)**. El apoyo es voluntario y no desbloquea funciones ni modifica el soporte.
