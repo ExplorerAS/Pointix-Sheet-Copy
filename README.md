@@ -2,13 +2,15 @@
 
 Complemento para copiar celdas y rangos de **Sheet Plus en Obsidian**. Funciona de forma independiente de [Pointix Sheet Navigation](https://github.com/ExplorerAS/Pointix-Sheet-Navigation); puedes usar ambos.
 
-## Instalar
+## Installation / Instalación
 
 Busca **Pointix Sheet Copy** en **Ajustes → Complementos comunitarios → Explorar**. Instala y activa también **Sheet Plus**, que proporciona las hojas de cálculo.
 
 Para instalación manual, coloca `main.js`, `manifest.json` y `styles.css` en `.obsidian/plugins/pointix-sheet-copy/`. Reinicia Obsidian o recarga los complementos y activa **Pointix Sheet Copy**. Los tres archivos deben corresponder a la misma versión.
 
-## Abrir el panel de copia
+## Usage / Uso
+
+### Abrir el panel de copia
 
 - **Teléfono o tableta:** abre una hoja completa de Sheet Plus, selecciona una celda y mantenla presionada para abrir el panel de Pointix. El panel tiene desplazamiento propio; ciérralo con **×** o tocando fuera. Si el teclado está visible, el panel se acomoda sobre él.
 - **PC o Mac:** haz clic derecho en la hoja. El panel de Pointix aparece junto al menú de Sheet Plus. También puedes ejecutar **Pointix Sheet Copy: Abrir panel de copiado** desde la paleta de comandos.
