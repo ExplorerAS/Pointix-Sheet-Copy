@@ -1,10 +1,11 @@
 {
   "id": "pointix-sheet-copy",
   "name": "Pointix Sheet Copy",
-  "version": "1.0.1",
+  "version": "1.4.2",
   "minAppVersion": "1.13.7",
-  "description": "Copy Sheet Plus cells with double tap on touch or pen, or Ctrl/Cmd + click on desktop.",
+  "description": "Copy Sheet Plus cells, formulas, ranges and cell formatting (colors, borders) as table, CSV or Markdown on desktop and mobile.",
   "author": "Pointix",
   "isDesktopOnly": false,
-  "authorUrl": "https://github.com/ExplorerAS"
+  "authorUrl": "https://github.com/ExplorerAS",
+  "fundingUrl": "https://ko-fi.com/exprorerit"
 }
