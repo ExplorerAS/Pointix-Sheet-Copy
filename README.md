@@ -67,14 +67,14 @@ Si te resulta útil, puedes **[invitarnos un café en Ko-fi](https://ko-fi.com/e
 
 ## Licencia y créditos
 
-Pointix Sheet Copy se publica con la [licencia MIT](./LICENSE). Puedes usar, adaptar y mejorar este código, incluso en tus propios proyectos. La licencia exige conservar el aviso **Copyright (c) 2026 Explorer It - Pointix** y el texto completo de la licencia en cada copia o versión adaptada.
+Pointix Sheet Copy se publica con la [licencia MIT](./LICENSE). Puedes usar, adaptar y mejorar este código, incluso en tus propios proyectos. La licencia exige conservar el aviso **Copyright (c) 2026 Explorer IT - Pointix** y el texto completo de la licencia en cada copia o versión adaptada.
 
 Si publicas una versión adaptada o mejorada, te pedimos dar crédito visible al original, por ejemplo en tu README o en la pantalla de ajustes:
 
-> Basado en [Pointix Sheet Copy](https://github.com/ExplorerAS/Pointix-Sheet-Copy) de Explorer It · Pointix
+> Basado en [Pointix Sheet Copy](https://github.com/ExplorerAS/Pointix-Sheet-Copy) de Explorer IT · Pointix
 
 ### License and credits
 
-Released under the [MIT License](./LICENSE). You are free to use, adapt and improve this code. The MIT License requires keeping the notice **Copyright (c) 2026 Explorer It - Pointix** and the full license text in every copy or adapted version. If you publish an adapted or improved version, we kindly ask you to also credit the original in a visible place:
+Released under the [MIT License](./LICENSE). You are free to use, adapt and improve this code. The MIT License requires keeping the notice **Copyright (c) 2026 Explorer IT - Pointix** and the full license text in every copy or adapted version. If you publish an adapted or improved version, we kindly ask you to also credit the original in a visible place:
 
-> Based on [Pointix Sheet Copy](https://github.com/ExplorerAS/Pointix-Sheet-Copy) by Explorer It · Pointix
+> Based on [Pointix Sheet Copy](https://github.com/ExplorerAS/Pointix-Sheet-Copy) by Explorer IT · Pointix
