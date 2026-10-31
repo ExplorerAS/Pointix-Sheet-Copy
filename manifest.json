@@ -4,7 +4,7 @@
   "version": "1.4.2",
   "minAppVersion": "1.13.7",
   "description": "Copy Sheet Plus cells, formulas, ranges and cell formatting (colors, borders) as table, CSV or Markdown on desktop and mobile.",
-  "author": "Pointix",
+  "author": "Explorer IT",
   "isDesktopOnly": false,
   "authorUrl": "https://github.com/ExplorerAS",
   "fundingUrl": "https://ko-fi.com/exprorerit"
